@@ -4,7 +4,7 @@ A high-performance, stateless authentication and authorization engine built with
 🛠 Technical Core Stack
 Backend: Java 17 (LTS)
 
-# Framework: Spring Boot 3.2.4
+Framework: Spring Boot 3.2.4
 
 Security: Spring Security 6.x (Method-level & Filter-based)
 
@@ -23,9 +23,9 @@ Unlike traditional session-based security, this implementation is entirely State
 2. Dual-Token Strategy (Access & Refresh)
 To balance security and user experience, the system implements a dual-token flow:
 
-Access Token: Short-lived (10 mins) containing user roles/authorities.
+ - Access Token: Short-lived (10 mins) containing user roles/authorities.
 
-Refresh Token: Long-lived (7 days) used to rotate access tokens without re-authentication.
+ - Refresh Token: Long-lived (7 days) used to rotate access tokens without re-authentication.
 
 3. Role-Based Access Control (RBAC)
 The service enforces strict separation of concerns through granular authority mapping:
