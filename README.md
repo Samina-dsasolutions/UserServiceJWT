@@ -1,5 +1,6 @@
-🔐 UserServiceJWT: Advanced Identity & Access Management (IAM)
-A high-performance, stateless authentication and authorization engine built with Spring Boot 3.2.4 and Spring Security 6. This service is designed to function as an Identity Provider (IdP) within a Microservices architecture.
+# 🔐 UserServiceJWT: Advanced Identity & Access Management (IAM)
+
+## A high-performance, stateless authentication and authorization engine built with Spring Boot 3.2.4 and Spring Security 6. This service is designed to function as an Identity Provider (IdP) within a Microservices architecture.
 
 🛠 Technical Core Stack
  - Backend: Java 17 (LTS)
