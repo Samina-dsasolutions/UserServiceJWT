@@ -31,6 +31,7 @@ A high-performance, stateless authentication and authorization engine built with
      - Refresh Token: Long-lived (7 days) used to rotate access tokens without re-authentication.
 
 3. Role-Based Access Control (RBAC)
+   
    #### The service enforces strict separation of concerns through granular authority mapping:
 
      - ROLE_USER: Standard access to personal profile data.
@@ -40,7 +41,8 @@ A high-performance, stateless authentication and authorization engine built with
      - ROLE_SUPER_ADMIN: Full system override capabilities.
 
 4. Cryptographic Integrity
-   #### Password Hashing: Implements BCryptPasswordEncoder with a strength factor of 10, preventing rainbow          table attacks.
+   
+     - Password Hashing: Implements BCryptPasswordEncoder with a strength factor of 10, preventing rainbow          table attacks.
 
-   #### Signature Verification: All tokens are signed using HMAC256 with a server-side secret key to prevent         payload tampering.
+     - Signature Verification: All tokens are signed using HMAC256 with a server-side secret key to prevent         payload tampering.
 
