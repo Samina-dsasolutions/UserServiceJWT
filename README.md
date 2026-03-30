@@ -19,10 +19,12 @@ A high-performance, stateless authentication and authorization engine built with
 🚀 Key Architectural Features
 
 1. Stateless Security Filter Chain
-#Unlike traditional session-based security, this implementation is entirely Stateless. Every request is validated through a custom AuthorizationFilter that intercepts the Bearer token, decodes the claims, and reconstructs the SecurityContext on the fly.
+   
+Unlike traditional session-based security, this implementation is entirely Stateless. Every request is validated through a custom AuthorizationFilter that intercepts the Bearer token, decodes the claims, and reconstructs the SecurityContext on the fly.
 
-2. Dual-Token Strategy (Access & Refresh)
-#To balance security and user experience, the system implements a dual-token flow:
+3. Dual-Token Strategy (Access & Refresh)
+   
+To balance security and user experience, the system implements a dual-token flow:
 
  - Access Token: Short-lived (10 mins) containing user roles/authorities.
 
