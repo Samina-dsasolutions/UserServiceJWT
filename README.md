@@ -2,26 +2,27 @@
 A high-performance, stateless authentication and authorization engine built with Spring Boot 3.2.4 and Spring Security 6. This service is designed to function as an Identity Provider (IdP) within a Microservices architecture.
 
 🛠 Technical Core Stack
-Backend: Java 17 (LTS)
+ - Backend: Java 17 (LTS)
 
-Framework: Spring Boot 3.2.4
+ - Framework: Spring Boot 3.2.4
 
-Security: Spring Security 6.x (Method-level & Filter-based)
+ - Security: Spring Security 6.x (Method-level & Filter-based)
 
-Token Management: Auth0 Java-JWT (HS256 HMAC)
+ - Token Management: Auth0 Java-JWT (HS256 HMAC)
 
-Persistence: Spring Data JPA + Hibernate 6
+ - Persistence: Spring Data JPA + Hibernate 6
 
-Database: MySQL 8.x
+ - Database: MySQL 8.x
 
-Boilerplate: Project Lombok
+ - Boilerplate: Project Lombok
 
 🚀 Key Architectural Features
+
 1. Stateless Security Filter Chain
-Unlike traditional session-based security, this implementation is entirely Stateless. Every request is validated through a custom AuthorizationFilter that intercepts the Bearer token, decodes the claims, and reconstructs the SecurityContext on the fly.
+#Unlike traditional session-based security, this implementation is entirely Stateless. Every request is validated through a custom AuthorizationFilter that intercepts the Bearer token, decodes the claims, and reconstructs the SecurityContext on the fly.
 
 2. Dual-Token Strategy (Access & Refresh)
-To balance security and user experience, the system implements a dual-token flow:
+#To balance security and user experience, the system implements a dual-token flow:
 
  - Access Token: Short-lived (10 mins) containing user roles/authorities.
 
