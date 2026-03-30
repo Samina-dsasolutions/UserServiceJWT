@@ -4,7 +4,7 @@ A high-performance, stateless authentication and authorization engine built with
 🛠 Technical Core Stack
 Backend: Java 17 (LTS)
 
-Framework: Spring Boot 3.2.4
+# Framework: Spring Boot 3.2.4
 
 Security: Spring Security 6.x (Method-level & Filter-based)
 
