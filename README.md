@@ -20,27 +20,27 @@ A high-performance, stateless authentication and authorization engine built with
 
 1. Stateless Security Filter Chain
    
-Unlike traditional session-based security, this implementation is entirely Stateless. Every request is validated through a custom AuthorizationFilter that intercepts the Bearer token, decodes the claims, and reconstructs the SecurityContext on the fly.
+   #### Unlike traditional session-based security, this implementation is entirely Stateless. Every request          is validated through a custom AuthorizationFilter that intercepts the Bearer token, decodes the              claims, and reconstructs the SecurityContext on the fly.
 
-3. Dual-Token Strategy (Access & Refresh)
+2. Dual-Token Strategy (Access & Refresh)
    
    #### To balance security and user experience, the system implements a dual-token flow:
 
- - Access Token: Short-lived (10 mins) containing user roles/authorities.
-
- - Refresh Token: Long-lived (7 days) used to rotate access tokens without re-authentication.
+     - Access Token: Short-lived (10 mins) containing user roles/authorities.
+    
+     - Refresh Token: Long-lived (7 days) used to rotate access tokens without re-authentication.
 
 3. Role-Based Access Control (RBAC)
-The service enforces strict separation of concerns through granular authority mapping:
+   #### The service enforces strict separation of concerns through granular authority mapping:
 
-ROLE_USER: Standard access to personal profile data.
-
-ROLE_ADMIN: Permission to execute POST operations and user management.
-
-ROLE_SUPER_ADMIN: Full system override capabilities.
+     - ROLE_USER: Standard access to personal profile data.
+     
+     - ROLE_ADMIN: Permission to execute POST operations and user management.
+     
+     - ROLE_SUPER_ADMIN: Full system override capabilities.
 
 4. Cryptographic Integrity
-Password Hashing: Implements BCryptPasswordEncoder with a strength factor of 10, preventing rainbow table attacks.
+   #### Password Hashing: Implements BCryptPasswordEncoder with a strength factor of 10, preventing rainbow          table attacks.
 
-Signature Verification: All tokens are signed using HMAC256 with a server-side secret key to prevent payload tampering.
+   #### Signature Verification: All tokens are signed using HMAC256 with a server-side secret key to prevent         payload tampering.
 
