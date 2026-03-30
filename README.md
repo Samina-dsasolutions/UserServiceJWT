@@ -24,7 +24,7 @@ Unlike traditional session-based security, this implementation is entirely State
 
 3. Dual-Token Strategy (Access & Refresh)
    
-###### To balance security and user experience, the system implements a dual-token flow:
+   #### To balance security and user experience, the system implements a dual-token flow:
 
  - Access Token: Short-lived (10 mins) containing user roles/authorities.
 
